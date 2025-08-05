@@ -2,153 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elegant Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ByteXL Fine Dining</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
-        <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
-        <li><a href="#menu" onclick="scrollToSection('menu')">Menu</a></li>
-        <li><a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a></li>
-        <li><a href="#reservation" onclick="scrollToSection('reservation')">Reservation</a></li>
-        <li><a href="#location" onclick="scrollToSection('location')">Location</a></li>
-        <li><a href="#blog" onclick="scrollToSection('blog')">Blog</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo"><a href="#">ByteXL</a></div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="home" class="hero">
+  <main class="hero-section" id="home">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Welcome to Elegant Restaurant</h1>
-      <p>Experience the finest dining with us.</p>
-      <button onclick="scrollToSection('reservation')" class="btn-primary">Book a Table</button>
+      <h1>Experience Culinary Artistry<br> at ByteXL</h1>
+      <a href="#reserve"><button class="cta-button">Reserve Your Experience</button></a>
     </div>
-  </section>
+  </main>
 
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Us</h2>
-    <p>Our restaurant blends modern elegance with classic flavors, delivering an unforgettable dining experience.</p>
+    <p>ByteXL offers an immersive fine dining experience where every dish is a masterpiece. Our chefs blend innovation with tradition to craft unforgettable culinary moments.</p>
   </section>
 
-  <section id="menu" class="section">
+  <section id="menu">
     <h2>Menu</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="vegetarian">Vegetarian</button>
-      <button class="filter-btn" data-category="non-vegetarian">Non-Vegetarian</button>
-      <button class="filter-btn" data-category="special">Special</button>
-    </div>
+    <div class="menu-tabs">
+      <input type="radio" id="veg" name="menu-tab" checked>
+      <label for="veg">Vegetarian</label>
+      <input type="radio" id="nonveg" name="menu-tab">
+      <label for="nonveg">Non-Vegetarian</label>
+      <input type="radio" id="desserts" name="menu-tab">
+      <label for="desserts">Desserts</label>
 
-    <div class="menu-items">
-      <div class="menu-item vegetarian">
-        <h3>Garden Salad</h3>
-        <p>Fresh greens with seasonal vegetables and house dressing.</p>
-        <span>$8</span>
+      <div class="tab-content veg">
+        <ul>
+          <li>Truffle Paneer Tikka</li>
+          <li>Garden Vegetable Risotto</li>
+          <li>Palak Ricotta Ravioli</li>
+        </ul>
       </div>
-      <div class="menu-item non-vegetarian">
-        <h3>Grilled Chicken</h3>
-        <p>Marinated chicken breast grilled to perfection.</p>
-        <span>$15</span>
+
+      <div class="tab-content nonveg">
+        <ul>
+          <li>Herb Grilled Chicken</li>
+          <li>Garlic Butter Shrimp</li>
+          <li>Classic Coq Au Vin</li>
+        </ul>
       </div>
-      <div class="menu-item special">
-        <h3>Chef's Special Steak</h3>
-        <p>Prime beef steak with secret sauce and sides.</p>
-        <span>$25</span>
-      </div>
-      <div class="menu-item vegetarian">
-        <h3>Veggie Pasta</h3>
-        <p>Pasta tossed with fresh vegetables and herbs.</p>
-        <span>$12</span>
-      </div>
-      <div class="menu-item non-vegetarian">
-        <h3>Seafood Platter</h3>
-        <p>Assortment of fresh seafood with garlic butter sauce.</p>
-        <span>$30</span>
-      </div>
-      <div class="menu-item special">
-        <h3>Truffle Risotto</h3>
-        <p>Creamy risotto infused with truffle oil and parmesan.</p>
-        <span>$22</span>
+
+      <div class="tab-content desserts">
+        <ul>
+          <li>Molten Lava Cake</li>
+          <li>Berry Cheesecake</li>
+          <li>French Crème Brûlée</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="section">
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1555992336-03a23c6f61b1?auto=format&fit=crop&w=400&q=80" alt="Dining Ambiance 1" />
-      <img src="https://images.unsplash.com/photo-1541542681-399a1e22ed27?auto=format&fit=crop&w=400&q=80" alt="Dining Ambiance 2" />
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Dining Ambiance 3" />
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80" alt="Dining Ambiance 4" />
+      <!-- images remain unchanged -->
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Fine Dining Table Setting">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Delicious Gourmet Dish">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Elegant Restaurant Interior">
+      <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=800&q=80" alt="Dessert Presentation">
+      <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=800&q=80" alt="Cozy Candlelit Ambience">
+      <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80" alt="Chef in Action">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Artistic Beverage Presentation">
     </div>
   </section>
+<section id="reserve">
+  <h2>Book Your Table</h2>
+  <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+    <input type="text" name="name" placeholder="Your Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="number" name="guests" placeholder="No. of Guests" required>
+    
+    <!-- ✅ Updated datetime-local input -->
+    <input type="datetime-local" id="datetime" name="datetime" required min="2025-08-05T00:00" value="2025-08-05T07:00">
 
-  <section id="reservation" class="section reservation-section">
-    <h2>Reservation</h2>
-    <form id="reservation-form" class="reservation-form" novalidate>
-      <label for="name">Full Name *</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name" />
+    
+    <label for="meal">Select Meal:</label>
+    <select name="meal" id="meal" required>
+      <option value="">--Choose--</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+    
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_subject" value="New Table Reservation - ByteXL">
+    <button type="submit">Confirm Reservation</button>
+  </form>
+</section>
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required placeholder="example@email.com" />
-
-      <label for="phone">Phone *</label>
-      <input type="tel" id="phone" name="phone" required placeholder="+1234567890" />
-
-      <label for="date">Date *</label>
-      <input type="date" id="date" name="date" required />
-
-      <label for="time">Time *</label>
-      <input type="time" id="time" name="time" required />
-
-      <label for="guests">Number of Guests *</label>
-      <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="1" />
-
-      <button type="submit" class="btn-primary">Reserve Now</button>
-    </form>
-  </section>
-
-  <section id="location" class="section">
-    <h2>Location</h2>
-    <p>123 Gourmet Street, Food City, Country</p>
-    <iframe
-      title="Restaurant Location"
-      src="https://maps.google.com/maps?q=123%20Gourmet%20Street%20Food%20City&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
-  </section>
-
-  <section id="blog" class="section">
-    <h2>Blog</h2>
-    <p>Stay tuned for our latest news and recipes coming soon!</p>
+  <section id="location">
+    <h2>Our Location</h2>
+    <p>Visit us at ByteXL Fine Dining, Jubilee Hills, Hyderabad, Telangana, India.</p>
+    <iframe src="https://maps.google.com/maps?q=jubilee%20hills%20hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border-radius: 10px; border: none;"></iframe>
   </section>
 
   <footer>
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"/></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram"/></a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter"/></a>
-    </div>
-    <p>&copy; 2025 Elegant Restaurant</p>
+    <p>&copy; 2025 ByteXL Fine Dining. All rights reserved.</p>
   </footer>
-
-  <!-- Reservation Confirmation Modal -->
-  <div id="reservation-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
-    <div class="modal-content">
-      <button id="modal-close" class="modal-close" aria-label="Close confirmation">&times;</button>
-      <h2 id="modal-title">Reservation Confirmed</h2>
-      <p id="modal-desc"></p>
-    </div>
-  </div>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
